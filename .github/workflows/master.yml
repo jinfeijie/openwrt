@@ -1,0 +1,23 @@
+name: 构建项目
+
+on:
+  push:
+    branches:
+      - master     
+  schedule:
+  - cron: '0 0 * * *'
+
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: 0
+
+    - name: exec_push
+      env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: chmod +x git.sh && /usr/bin/bash git.sh

@@ -1,0 +1,25 @@
+From deee2d47ca75fbe777e7d6842b90fa576464e056 Mon Sep 17 00:00:00 2001
+From: jinfeijie <me@jinfeijie.cn>
+Date: Wed, 14 Dec 2022 00:25:47 +0800
+Subject: [PATCH] pcduino3b
+
+---
+ arch/arm/boot/dts/sun7i-a20-pcduino3.dts | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm/boot/dts/sun7i-a20-pcduino3.dts b/arch/arm/boot/dts/sun7i-a20-pcduino3.dts
+index 928b86a95f3495..7ec7197a2a6fb4 100644
+--- a/arch/arm/boot/dts/sun7i-a20-pcduino3.dts
++++ b/arch/arm/boot/dts/sun7i-a20-pcduino3.dts
+@@ -121,9 +121,9 @@
+ 
+ &gmac {
+ 	pinctrl-names = "default";
+-	pinctrl-0 = <&gmac_mii_pins>;
++	pinctrl-0 = <&gmac_rgmii_pins>;
+ 	phy-handle = <&phy1>;
+-	phy-mode = "mii";
++	phy-mode = "rgmii-id";
+ 	status = "okay";
+ };
+ 
