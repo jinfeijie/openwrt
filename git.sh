@@ -34,6 +34,8 @@ sudo rm -rf .github
 rm .gitignore
 mv img.gitignore .gitignore
 
+echo "OpenWrt for PcDuino3B" > README.md
+
 git init
 git remote add origin https://jinfeijie:$GH_TOKEN@github.com/jinfeijie/openwrt-pcduino.git
 git config --global user.email "jfjjh@qq.com"
