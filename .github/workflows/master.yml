@@ -3,9 +3,7 @@ name: 构建项目
 on:
   push:
     branches:
-      - master     
-  schedule:
-  - cron: '0 0 * * *'
+      - master
 
 
 jobs:
